@@ -1,0 +1,9 @@
+name: abide
+batch_size: 16
+test_batch_size: 16
+val_batch_size: 16
+train_set: 0.7
+val_set: 0.1
+path: C:/Users/knief/OneDrive/桌面/6.6补充实验/代码与说明/代码/abide_age+sex.npy
+stratified: True
+drop_last: True

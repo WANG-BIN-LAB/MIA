@@ -1,5 +1,3 @@
-# MIA
-
 ## Experimental Settings
 
 **GBT**

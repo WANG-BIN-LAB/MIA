@@ -23,7 +23,18 @@ pip install -r requirements.txt
 ```
 ## 🚀 Usage
 
-Run the following command to start the main program:
+GBT:
 
 ```bash
-python main.py
+python -m source --multirun datasz=100p model=gbt dataset=ABIDE preprocess=non_mixup
+
+ALTER:
+
+```bash
+python -m alter model=lrbgt dataset=ABIDE
+
+CAGT:
+
+```bash
+python train.py --root_dir ./dataset/ABIDE_I --epochs 70 --batch-size 64 --dropout 0.2
+

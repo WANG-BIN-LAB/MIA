@@ -1,4 +1,3 @@
-# RAGT-DM
 # Dependencies
 - python==3.11.10
 - torch==2.1.0+cu118
@@ -14,10 +13,10 @@ Run the following command to create and configure the environment:
 
 ```bash
 # Create environment
-conda create --name RAGT-DM python=3.11.10
+conda create --name PyEnv python=3.11.10
 
 # Activate environment
-conda activate RAGT-DM
+conda activate PyEnv
 
 # Install dependency packages
 pip install -r requirements.txt

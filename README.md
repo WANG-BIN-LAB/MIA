@@ -22,19 +22,16 @@ conda activate PyEnv
 pip install -r requirements.txt
 ```
 ## 🚀 Usage
-
+```bash
 GBT:
 
-```bash
 python -m source --multirun datasz=100p model=gbt dataset=ABIDE preprocess=non_mixup
 
 ALTER:
 
-```bash
 python -m alter model=lrbgt dataset=ABIDE
 
 CAGT:
 
-```bash
 python train.py --root_dir ./dataset/ABIDE_I --epochs 70 --batch-size 64 --dropout 0.2
 

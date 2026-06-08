@@ -1,25 +1,30 @@
-## Experimental Settings
+# RAGT-DM
+# Dependencies
+- python==3.11.10
+- torch==2.1.0+cu118
+- numpy==1.26.4
+- tqdm==4.67.1
+- pandas==2.2.3
+- networkx==3.4.2
+- argparse==1.4.0
+- scipy==1.31.1
+- scikit-learn==1.5.2
+##  🛠 Installation
+Run the following command to create and configure the environment:
 
-**GBT**
+```bash
+# Create environment
+conda create --name RAGT-DM python=3.11.10
 
-**Hyperparameters:** Batch size = 16 (64 in original paper, official released code uses 16), 200 epochs, 2-layer multi-head attention, lr=1e-4, weight decay=1e-4; train/val/test split = 7:1:2, 5 repeated runs.
+# Activate environment
+conda activate RAGT-DM
 
-**Hardware:** NVIDIA GeForce RTX 4090
+# Install dependency packages
+pip install -r requirements.txt
+```
+## 🚀 Usage
 
-**Code Adjustment:** Only revise data loading for our custom dataset.
+Run the following command to start the main program:
 
-**ALTER**
-
-**Hyperparameters:** Batch size = 16, 200 epochs, L=2 nonlinear layers, M=4 attention heads, lr=1e-4, weight decay=1e-4; train/val/test split = 7:1:2, 10 repeated runs; adaptive random walk step K=16.
-
-**Hardware:** Tesla V100
-
-**Code Adjustment:** Complete missing source files and adapt data loading to our dataset.
-
-**CAGT**
-
-**Hyperparameters:** Batch size = 64, 70 epochs, Transformer with 2 layers & 8 heads, lr=1e-4, weight decay=1e-6, 10-fold cross validation; top-30 connections preserved as edges per node.
-
-**Hardware:** GeForce RTX 3080 Ti
-
-**Code Adjustment:** Move read_data.py & comm_utils.py to root folder; implement missing is_float() in utils.py; add required raw_name argument for ABIDEDataset initialization in train.py.
+```bash
+python main.py
